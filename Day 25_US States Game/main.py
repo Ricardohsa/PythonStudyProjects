@@ -9,7 +9,6 @@ screen.addshape(image)
 turtle.shape(image)
 
 guess_states = []
-missing_states = []
 STYLE = ('Courier', 12, 'italic')
 data = pd.read_csv("50_states.csv")
 
@@ -31,12 +30,11 @@ while len(guess_states) < 50:
     answer_state = screen.textinput(title=f"{len(guess_states)}"
                                           f"/50States Correct", prompt="What's another state name?").title()
     if answer_state == "Exit":
-        for item in all_states:
-            if item not in guess_states:
-                write_missing_state(item)
-                missing_states.append(item)
+        missing_states = [item for item in all_states if item not in guess_states]
         df = pd.DataFrame(missing_states)
         df.to_csv("missing_states.csv")
+        for state in missing_states:
+            write_missing_state(state)
         break
     elif answer_state in all_states:
         add_state = Turtle()

@@ -13,7 +13,7 @@ to = "r.humberto.sa@gmail.com"
 with open("quotes.txt", "r") as file:
     data = file.read()
 
-    if current_day.weekday() == 3:
+    if current_day.weekday() == 0:
         data_into_list = data.replace('"', '').split('\n')
 
         with smtp.SMTP("smtp.gmail.com") as connection:
@@ -21,4 +21,4 @@ with open("quotes.txt", "r") as file:
             connection.login(user=my_email, password=password)
             connection.sendmail(from_addr=my_email,
                                 to_addrs=to,
-                                msg=f"Subject:Hello\n\n {rd.choice(data_into_list)}")
+                                msg=f"Subject:Moment of Inspiration\n\n {rd.choice(data_into_list)}")

@@ -324,7 +324,11 @@ from itertools import groupby
 #
 # print(result_2)
 
-# 34. Write a Python Program to Test if List contains elements in Range
+# 35. Write a Python program to check if the list contains three consecutive common numbers in Python
 
+my_list = [18, 18, 18, 6, 3, 4, 9, 9, 9]
+total = collections.Counter(my_list)
 
-[4, 5, 6, 7, 3, 9]
+for key, value in total.items():
+    if value >2:
+        print(key)

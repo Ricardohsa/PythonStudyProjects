@@ -332,3 +332,8 @@ total = collections.Counter(my_list)
 for key, value in total.items():
     if value >2:
         print(key)
+
+
+# teste
+
+print(3+4)

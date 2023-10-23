@@ -337,3 +337,5 @@ for key, value in total.items():
 # teste
 
 print(3+4)
+
+new_list = ['teste', 't']

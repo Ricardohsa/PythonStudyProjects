@@ -289,10 +289,42 @@ from itertools import groupby
 # new_list = set(my_list)
 # print(len(new_list))
 
-32. Write a Python Program to List product excluding duplicates
+# 32. Write a Python Program to List product excluding duplicates
 
-Sample Output
 
-[2, 1, 2, 4, 6, 4, 3, 2, 1]
+# my_list = [2, 1, 2, 4, 6, 4, 3, 2, 1]
+# result = []
+# element_couts = collections.Counter(my_list)
+# print(element_couts)
+#
+# for element in my_list:
+#     product = element ** element_couts[element]
+#     result.append(product)
+#
+# print(result)
 
-Duplication removal list product : 144
+# Duplication removal list product : 144
+
+# 33. Write a Python Program to Extract elements with Frequency greater than 2
+#
+# my_list = [4, 6, 4, 3, 3, 4, 3, 7, 8, 8]
+# frequency = collections.Counter(my_list)
+# di = dict(frequency)
+# result=[]
+#
+# for key, value in di.items():
+#     if value > 2:
+#         result.append(key)
+# print(result)
+#
+#
+#
+#
+# result_2 = [element for element, count in frequency.items() if count > 2]
+#
+# print(result_2)
+
+# 34. Write a Python Program to Test if List contains elements in Range
+
+
+[4, 5, 6, 7, 3, 9]
